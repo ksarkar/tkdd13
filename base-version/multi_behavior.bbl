@@ -1,0 +1,177 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Aral, Muchnik, and
+  Sundararajan}{2009}]{Aral09}
+Aral, S.; Muchnik, L.; and Sundararajan, A.
+\newblock 2009.
+\newblock Distinguishing influence-based contagion from homophily-driven
+  diffusion in dynamic networks.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America} 106:21544.
+
+\bibitem[\protect\citeauthoryear{Barabasi and Albert}{1999}]{barabasi99}
+Barabasi, A., and Albert, R.
+\newblock 1999.
+\newblock Emergence of scaling in random networks.
+\newblock {\em Science} 509-12:286.
+
+\bibitem[\protect\citeauthoryear{Bass}{1969}]{bass69}
+Bass, F.~M.
+\newblock 1969.
+\newblock A new product growth for consumer durables.
+\newblock {\em Management Science} 15:215--227.
+
+\bibitem[\protect\citeauthoryear{Bharathi, Kempe, and Salek}{2007}]{Bharathi07}
+Bharathi, S.; Kempe, D.; and Salek, M.
+\newblock 2007.
+\newblock Competitive influence maximization in social networks.
+\newblock In {\em In WINE},  306--311.
+
+\bibitem[\protect\citeauthoryear{Carnes \bgroup et al\mbox.\egroup
+  }{2007}]{Carnes07}
+Carnes, T.; Nagarajan, R.; Wild, S.~M.; and Zuylen, A.~V.
+\newblock 2007.
+\newblock Maximizing influence in a competitive social network: a follower’s
+  perspective.
+\newblock In {\em In ICEC ’07: Proceedings of the ninth international
+  conference on Electronic commerce},  351--360.
+\newblock ACM.
+
+\bibitem[\protect\citeauthoryear{Chen, Wang, and Yang}{2009}]{Chen09}
+Chen, W.; Wang, Y.; and Yang, S.
+\newblock 2009.
+\newblock Efficient influence maximization in social networks.
+\newblock In {\em Proceedings of the 15th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD '09,  199--208.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Chen, Yuan, and Zhang}{2010}]{Chen10}
+Chen, W.; Yuan, Y.; and Zhang, L.
+\newblock 2010.
+\newblock Scalable influence maximization in social networks under the linear
+  threshold model.
+\newblock In {\em Proceedings of the 2010 IEEE International Conference on Data
+  Mining}, ICDM '10,  88--97.
+\newblock Washington, DC, USA: IEEE Computer Society.
+
+\bibitem[\protect\citeauthoryear{Domingos and Richardson}{2002}]{Domingos02}
+Domingos, P., and Richardson, M.
+\newblock 2002.
+\newblock Mining the network value of customers.
+\newblock In {\em In Proceedings of the Seventh International Conference on
+  Knowledge Discovery and Data Mining},  57--66.
+\newblock ACM Press.
+
+\bibitem[\protect\citeauthoryear{Goel, Watts, and Goldstein}{2012}]{Goel12}
+Goel, S.; Watts, D.~J.; and Goldstein, D.~G.
+\newblock 2012.
+\newblock The structure of online diffusion networks.
+\newblock In {\em Proceedings of the 13th ACM Conference on Electronic
+  Commerce}, EC '12,  623--638.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Goyal, Bonchi, and Lakshmanan}{2010}]{Goyal10}
+Goyal, A.; Bonchi, F.; and Lakshmanan, L.~V.
+\newblock 2010.
+\newblock Learning influence probabilities in social networks.
+\newblock In {\em Proceedings of the third ACM international conference on Web
+  search and data mining}, WSDM '10,  241--250.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Granovetter}{1983}]{granovetter83}
+Granovetter, M.
+\newblock 1983.
+\newblock Threshold models for collective behavior.
+\newblock {\em American Journal of Sociology} 6:1420--1443.
+
+\bibitem[\protect\citeauthoryear{Kempe, Kleinberg, and Tardos}{2003}]{Kempe03}
+Kempe, D.; Kleinberg, J.; and Tardos, E.
+\newblock 2003.
+\newblock Maximizing the spread of influence through a social network.
+\newblock In {\em Proceedings of the ninth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD '03,  137--146.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Leskovec \bgroup et al\mbox.\egroup
+  }{2007}]{Leskovec07}
+Leskovec, J.; Krause, A.; Guestrin, C.; Faloutsos, C.; VanBriesen, J.; and
+  Glance, N.
+\newblock 2007.
+\newblock Cost-effective outbreak detection in networks.
+\newblock In {\em ACM SIGKDD International Conference on Knowledge Discovery
+  and Data Mining (KDD)},  420--429.
+
+\bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and
+  Faloutsos}{2007}]{Leskovec07a}
+Leskovec, J.; Kleinberg, J.; and Faloutsos, C.
+\newblock 2007.
+\newblock Graph evolution: Densification and shrinking diameters.
+\newblock {\em ACM Trans. Knowl. Discov. Data} 1(1).
+
+\bibitem[\protect\citeauthoryear{Mathioudakis \bgroup et al\mbox.\egroup
+  }{2011}]{Mathioudakis11}
+Mathioudakis, M.; Bonchi, F.; Castillo, C.; Gionis, A.; and Ukkonen, A.
+\newblock 2011.
+\newblock Sparsification of influence networks.
+\newblock In {\em Proceedings of the 17th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD '11,  529--537.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Ostrom \bgroup et al\mbox.\egroup
+  }{1999}]{Ostrom1999}
+Ostrom, E.; Burger, J.; Field, C.~B.; Norgaard, R.~B.; and Policansky, D.
+\newblock 1999.
+\newblock Revisiting the commons: Local lessons, global challenges.
+\newblock {\em Science} 284(5412):278--282.
+
+\bibitem[\protect\citeauthoryear{Rogers}{1962}]{rogers62}
+Rogers, E.
+\newblock 1962.
+\newblock {\em Diffusion of Innovations}.
+\newblock Free Press.
+
+\bibitem[\protect\citeauthoryear{Saito, Nakano, and Kimura}{2008}]{Saito08}
+Saito, K.; Nakano, R.; and Kimura, M.
+\newblock 2008.
+\newblock Prediction of information diffusion probabilities for independent
+  cascade model.
+\newblock In {\em Proceedings of the 12th international conference on
+  Knowledge-Based Intelligent Information and Engineering Systems, Part III},
+  KES '08,  67--75.
+\newblock Berlin, Heidelberg: Springer-Verlag.
+
+\bibitem[\protect\citeauthoryear{Shalizi and Thomas}{2011}]{shalizi11}
+Shalizi, C.~R., and Thomas, A.~C.
+\newblock 2011.
+\newblock Homophily and contagion are generically confounded in observational
+  social network studies.
+\newblock {\em SOCIOLOGICAL METHODS AND RESEARCH} 40:211.
+
+\bibitem[\protect\citeauthoryear{Stonedahl and Wilensky}{2008}]{Stonedahl08}
+Stonedahl, F., and Wilensky, U.
+\newblock 2008.
+\newblock Netlogo virus on a network model.
+  http://ccl.northwestern.edu/netlogo/models/virusonanetwork. center for
+  connected learning and computer-based modeling, northwestern university,
+  evanston, il.
+
+\bibitem[\protect\citeauthoryear{Watts and Strogatz}{1998}]{watts98}
+Watts, D., and Strogatz, S.
+\newblock 1998.
+\newblock Collective dynamics of ‘‘small-world’’ networks.
+\newblock {\em Nature} 440-42:393.
+
+\bibitem[\protect\citeauthoryear{Watts}{2002}]{Watts02}
+Watts, D.~J.
+\newblock 2002.
+\newblock A simple model of global cascades on random networks.
+\newblock {\em Proceedings of the National Academy of Sciences}
+  99(9):5766--5771.
+
+\bibitem[\protect\citeauthoryear{Wilensky}{1999}]{Wilensky99}
+Wilensky, U.
+\newblock 1999.
+\newblock Netlogo. http://ccl.northwestern.edu/netlogo/. center for connected
+  learning and computer-based modeling, northwestern university, evanston, il.
+
+\end{thebibliography}

@@ -1,0 +1,311 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem[\protect\citeauthoryear{Aral, Muchnik, and Sundararajan}{Aral
+  et~al\mbox{.}}{2009}]%
+        {Aral09}
+{Sinan Aral}, {Lev Muchnik}, {and} {Arun Sundararajan}. 2009.
+\newblock \showarticletitle{Distinguishing influence-based contagion from
+  homophily-driven diffusion in dynamic networks}.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}  {106} (2009), 21544.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Barabasi and Albert}{Barabasi and
+  Albert}{1999}]%
+        {barabasi99}
+{A.L. Barabasi} {and} {R. Albert}. 1999.
+\newblock \showarticletitle{Emergence of Scaling in Random Networks}.
+\newblock {\em Science\/}  {509-12} (1999), 286.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bass}{Bass}{1969}]%
+        {bass69}
+{F.~M. Bass}. 1969.
+\newblock \showarticletitle{A new product growth for consumer durables}.
+\newblock {\em Management Science\/}  {15} (1969), 215--227.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bharathi, Kempe, and Salek}{Bharathi
+  et~al\mbox{.}}{2007}]%
+        {Bharathi07}
+{Shishir Bharathi}, {David Kempe}, {and} {Mahyar Salek}. 2007.
+\newblock \showarticletitle{Competitive influence maximization in social
+  networks}. In {\em In WINE}. 306--311.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Carnes, Nagarajan, Wild, and Zuylen}{Carnes
+  et~al\mbox{.}}{2007}]%
+        {Carnes07}
+{Tim Carnes}, {Rashekhar Nagarajan}, {Stefan~M. Wild}, {and} {Anke~Van Zuylen}.
+  2007.
+\newblock \showarticletitle{Maximizing influence in a competitive social
+  network: a follower’s perspective}. In {\em In ICEC ’07: Proceedings of
+  the ninth international conference on Electronic commerce}. ACM, 351--360.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Wang, and Yang}{Chen
+  et~al\mbox{.}}{2009}]%
+        {Chen09}
+{Wei Chen}, {Yajun Wang}, {and} {Siyu Yang}. 2009.
+\newblock \showarticletitle{Efficient influence maximization in social
+  networks}. In {\em Proceedings of the 15th ACM SIGKDD international
+  conference on Knowledge discovery and data mining} {\em (KDD '09)}. ACM, New
+  York, NY, USA, 199--208.
+\newblock
+\showISBNx{978-1-60558-495-9}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/1557019.1557047}}
+
+
+\bibitem[\protect\citeauthoryear{Chen, Yuan, and Zhang}{Chen
+  et~al\mbox{.}}{2010}]%
+        {Chen10}
+{Wei Chen}, {Yifei Yuan}, {and} {Li Zhang}. 2010.
+\newblock \showarticletitle{Scalable Influence Maximization in Social Networks
+  under the Linear Threshold Model}. In {\em Proceedings of the 2010 IEEE
+  International Conference on Data Mining} {\em (ICDM '10)}. IEEE Computer
+  Society, Washington, DC, USA, 88--97.
+\newblock
+\showISBNx{978-0-7695-4256-0}
+\showDOI{%
+\url{http://dx.doi.org/10.1109/ICDM.2010.118}}
+
+
+\bibitem[\protect\citeauthoryear{Domingos and Richardson}{Domingos and
+  Richardson}{2002}]%
+        {Domingos02}
+{Pedro Domingos} {and} {Matt Richardson}. 2002.
+\newblock \showarticletitle{Mining the Network Value of Customers}. In {\em In
+  Proceedings of the Seventh International Conference on Knowledge Discovery
+  and Data Mining}. ACM Press, 57--66.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Goel, Watts, and Goldstein}{Goel
+  et~al\mbox{.}}{2012}]%
+        {Goel12}
+{Sharad Goel}, {Duncan~J. Watts}, {and} {Daniel~G. Goldstein}. 2012.
+\newblock \showarticletitle{The structure of online diffusion networks}. In
+  {\em Proceedings of the 13th ACM Conference on Electronic Commerce} {\em (EC
+  '12)}. ACM, New York, NY, USA, 623--638.
+\newblock
+\showISBNx{978-1-4503-1415-2}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/2229012.2229058}}
+
+
+\bibitem[\protect\citeauthoryear{Goyal, Bonchi, and Lakshmanan}{Goyal
+  et~al\mbox{.}}{2010}]%
+        {Goyal10}
+{Amit Goyal}, {Francesco Bonchi}, {and} {Laks~V.S. Lakshmanan}. 2010.
+\newblock \showarticletitle{Learning influence probabilities in social
+  networks}. In {\em Proceedings of the third ACM international conference on
+  Web search and data mining} {\em (WSDM '10)}. ACM, New York, NY, USA,
+  241--250.
+\newblock
+\showISBNx{978-1-60558-889-6}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/1718487.1718518}}
+
+
+\bibitem[\protect\citeauthoryear{Granovetter}{Granovetter}{1983}]%
+        {granovetter83}
+{M. Granovetter}. 1983.
+\newblock \showarticletitle{Threshold Models for Collective Behavior}.
+\newblock {\it Amer. J. Sociology}  {6} (1983), 1420--1443.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kempe, Kleinberg, and Tardos}{Kempe
+  et~al\mbox{.}}{2003}]%
+        {Kempe03}
+{David Kempe}, {Jon Kleinberg}, {and} {\'{E}va Tardos}. 2003.
+\newblock \showarticletitle{Maximizing the spread of influence through a social
+  network}. In {\em Proceedings of the ninth ACM SIGKDD international
+  conference on Knowledge discovery and data mining} {\em (KDD '03)}. ACM, New
+  York, NY, USA, 137--146.
+\newblock
+\showISBNx{1-58113-737-0}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/956750.956769}}
+
+
+\bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and Faloutsos}{Leskovec
+  et~al\mbox{.}}{2007a}]%
+        {Leskovec07a}
+{Jure Leskovec}, {Jon Kleinberg}, {and} {Christos Faloutsos}. 2007a.
+\newblock \showarticletitle{Graph evolution: Densification and shrinking
+  diameters}.
+\newblock {\em ACM Trans. Knowl. Discov. Data\/} {1}, 1, Article 2 (March
+  2007).
+\newblock
+\showISSN{1556-4681}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/1217299.1217301}}
+
+
+\bibitem[\protect\citeauthoryear{Leskovec, Krause, Guestrin, Faloutsos,
+  VanBriesen, and Glance}{Leskovec et~al\mbox{.}}{2007b}]%
+        {Leskovec07}
+{Jure Leskovec}, {Andreas Krause}, {Carlos Guestrin}, {Christos Faloutsos},
+  {Jeanne VanBriesen}, {and} {Natalie Glance}. 2007b.
+\newblock \showarticletitle{Cost-effective Outbreak Detection in Networks}. In
+  {\em ACM SIGKDD International Conference on Knowledge Discovery and Data
+  Mining (KDD)}. 420--429.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mathioudakis, Bonchi, Castillo, Gionis, and
+  Ukkonen}{Mathioudakis et~al\mbox{.}}{2011}]%
+        {Mathioudakis11}
+{Michael Mathioudakis}, {Francesco Bonchi}, {Carlos Castillo}, {Aristides
+  Gionis}, {and} {Antti Ukkonen}. 2011.
+\newblock \showarticletitle{Sparsification of influence networks}. In {\em
+  Proceedings of the 17th ACM SIGKDD international conference on Knowledge
+  discovery and data mining} {\em (KDD '11)}. ACM, New York, NY, USA, 529--537.
+\newblock
+\showISBNx{978-1-4503-0813-7}
+\showDOI{%
+\url{http://dx.doi.org/10.1145/2020408.2020492}}
+
+
+\bibitem[\protect\citeauthoryear{Nemhauser, Wolsey, and Fisher}{Nemhauser
+  et~al\mbox{.}}{1978}]%
+        {Nemhauser78}
+{G.~L. Nemhauser}, {L.~A. Wolsey}, {and} {M.~L. Fisher}. 1978.
+\newblock \showarticletitle{{An analysis of approximations for maximizing
+  submodular set functions—I}}.
+\newblock {\em Mathematical Programming\/} {14}, 1 (1 Dec. 1978), 265--294.
+\newblock
+\showISSN{0025-5610}
+\showDOI{%
+\url{http://dx.doi.org/10.1007/bf01588971}}
+
+
+\bibitem[\protect\citeauthoryear{Ostrom, Burger, Field, Norgaard, and
+  Policansky}{Ostrom et~al\mbox{.}}{1999}]%
+        {Ostrom1999}
+{Elinor Ostrom}, {Joanna Burger}, {Christopher~B. Field}, {Richard~B.
+  Norgaard}, {and} {David Policansky}. 1999.
+\newblock \showarticletitle{Revisiting the Commons: Local Lessons, Global
+  Challenges}.
+\newblock {\em Science\/} {284}, 5412 (1999), 278--282.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rogers}{Rogers}{1962}]%
+        {rogers62}
+{E. Rogers}. 1962.
+\newblock {\em Diffusion of Innovations}.
+\newblock Free Press.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Saito, Nakano, and Kimura}{Saito
+  et~al\mbox{.}}{2008}]%
+        {Saito08}
+{Kazumi Saito}, {Ryohei Nakano}, {and} {Masahiro Kimura}. 2008.
+\newblock \showarticletitle{Prediction of Information Diffusion Probabilities
+  for Independent Cascade Model}. In {\em Proceedings of the 12th international
+  conference on Knowledge-Based Intelligent Information and Engineering
+  Systems, Part III} {\em (KES '08)}. Springer-Verlag, Berlin, Heidelberg,
+  67--75.
+\newblock
+\showISBNx{978-3-540-85566-8}
+\showDOI{%
+\url{http://dx.doi.org/10.1007/978-3-540-85567-5_9}}
+
+
+\bibitem[\protect\citeauthoryear{Shalizi and Thomas}{Shalizi and
+  Thomas}{2011}]%
+        {shalizi11}
+{Cosma~Rohilla Shalizi} {and} {Andrew~C. Thomas}. 2011.
+\newblock \showarticletitle{Homophily and Contagion Are Generically Confounded
+  in Observational Social Network Studies}.
+\newblock {\em SOCIOLOGICAL METHODS AND RESEARCH\/}  {40} (2011), 211.
+\newblock
+\showURL{%
+\url{doi:10.1177/0049124111404820}}
+
+
+\bibitem[\protect\citeauthoryear{Stonedahl and Wilensky}{Stonedahl and
+  Wilensky}{2008}]%
+        {Stonedahl08}
+{F. Stonedahl} {and} {U. Wilensky}. 2008.
+\newblock NetLogo Virus on a Network model.
+  http://ccl.northwestern.edu/netlogo/models/VirusonaNetwork. Center for
+  Connected Learning and Computer-Based Modeling, Northwestern University,
+  Evanston, IL.  (2008).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Watts and Strogatz}{Watts and
+  Strogatz}{1998}]%
+        {watts98}
+{D.J. Watts} {and} {S.H. Strogatz}. 1998.
+\newblock \showarticletitle{Collective Dynamics of ‘‘Small-World’’
+  Networks}.
+\newblock {\em Nature\/}  {440-42} (1998), 393.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Watts}{Watts}{2002}]%
+        {Watts02}
+{Duncan~J. Watts}. 2002.
+\newblock \showarticletitle{A simple model of global cascades on random
+  networks}.
+\newblock {\em Proceedings of the National Academy of Sciences\/} {99}, 9 (30
+  April 2002), 5766--5771.
+\newblock
+\showISSN{1091-6490}
+\showDOI{%
+\url{http://dx.doi.org/10.1073/pnas.082090499}}
+
+
+\bibitem[\protect\citeauthoryear{Wilensky}{Wilensky}{1999}]%
+        {Wilensky99}
+{U. Wilensky}. 1999.
+\newblock NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected
+  Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
+  (1999).
+\newblock
+
+
+\end{thebibliography}

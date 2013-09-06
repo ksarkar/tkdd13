@@ -1,0 +1,25 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: multi-behavior.aux
+The style file: ACM-Reference-Format-Journals.bst
+Database file #1: refs.bib
+I was expecting a `,' or a `}'---line 145 of file refs.bib
+ :   pages = 21544
+ :                -21549},
+I'm skipping whatever remains of this entry
+Warning--empty publisher in Bharathi07
+Warning--empty address in Bharathi07
+Warning--empty address in Carnes07
+Warning--require articleno with numpages field in Chen09
+Warning--require articleno with numpages field in Chen10
+Warning--empty address in Domingos02
+Warning--require articleno with numpages field in Goel12
+Warning--require articleno with numpages field in Goyal10
+Warning--require articleno with numpages field in Kempe03
+Warning--articleno field, but no numpages field, in Leskovec07a
+Warning--page numbers missing in both pages and numpages fields in Leskovec07a
+Warning--require pages or numpages fields with articleno field in Leskovec07a
+Warning--empty publisher in Leskovec07
+Warning--empty address in Leskovec07
+Warning--require articleno with numpages field in Mathioudakis11
+Warning--empty address in rogers62
+Warning--require articleno with numpages field in Saito08
+(There was 1 error message)
