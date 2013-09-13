@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.4.19)  12 AUG 2013 17:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.8.7)  11 SEP 2013 02:35
 entering extended mode
 **multi-behavior.tex
 
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\multi-behavior.t
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\multi-behavior.t
 ex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
@@ -15,9 +15,9 @@ an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese,
 romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\acmsmall.cls
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\acmsmall.cls
 Document Class: acmsmall 2012/03/05, fonts included on 28 June 2010
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\url.sty
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -43,10 +43,10 @@ Package color Info: Driver file: pdftex.def on input line 130.
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
 ))
@@ -112,7 +112,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathbb' in version `bold'
 (Font)                  OT1/ams/bx/n --> OT1/ams/bx/n on input line 3620.
 )
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\algorithm2e.sty
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
 \c@AlgoLine=\count91
 
@@ -223,20 +223,20 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \colbreak@box=\box66
 \multicol@sort@counter=\count104
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\lipsum\lipsum.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count105
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\genmisc\nth.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
 Package: nth 2002/02/27
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
 \captionmargin=\dimen127
 \captionmargin@=\dimen128
@@ -362,43 +362,35 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 97.
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.
-sty
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.st
-y
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
--common.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
 \pgfutil@everybye=\toks21
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
--latex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+"
 \pgfutil@abb=\box69
-
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.
-code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
 Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
-
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.
-sty
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.
-sty
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s.code.tex
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+"
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
-
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-.code.tex
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+"
 \pgfkeys@pathtoks=\toks22
 \pgfkeys@temptoks=\toks23
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-filtered.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
 \pgfkeys@tmptoks=\toks24
 ))
 \pgf@x=\dimen146
@@ -416,31 +408,29 @@ filtered.code.tex
 \c@pgf@countc=\count128
 \c@pgf@countd=\count129
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.c
-fg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s-pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
+ef"
 File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s-common-pdf.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
+df.def"
 File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-ssoftpath.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
+code.tex"
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count130
 \pgfsyssoftpath@bigbuffer@items=\count131
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-sprotocol.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
+code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -458,18 +448,14 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-e.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+"
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
-
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
-.tex
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.
-code.tex
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.
-code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparse
-r.code.tex
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+"
 \pgfmath@dimen=\dimen154
 \pgfmath@count=\count132
 \pgfmath@box=\box70
@@ -477,28 +463,27 @@ r.code.tex
 \pgfmath@stack@operand=\toks26
 \pgfmath@stack@operation=\toks27
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.code.tex
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.basic.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.trigonometric.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.random.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.comparison.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.base.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.round.code.tex)
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.misc.code.tex)))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat
-.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count133
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epoints.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
+de.tex"
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@picminx=\dimen155
 \pgf@picmaxx=\dimen156
@@ -515,120 +500,117 @@ File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
 \pgf@zx=\dimen167
 \pgf@zy=\dimen168
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathconstruct.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
+ruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
 \pgf@path@lastx=\dimen169
 \pgf@path@lasty=\dimen170
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathusage.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
+.code.tex"
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 \pgf@shorten@end@additional=\dimen171
 \pgf@shorten@start@additional=\dimen172
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-escopes.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
+de.tex"
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box71
 \pgf@hbox=\box72
 \pgf@layerbox@main=\box73
 \pgf@picture@serial@count=\count134
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-egraphicstate.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
+ate.code.tex"
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
 \pgflinewidth=\dimen173
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-etransformations.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
+ations.code.tex"
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
 \pgf@pt@x=\dimen174
 \pgf@pt@y=\dimen175
 \pgf@pt@temp=\dimen176
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-equick.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
+e.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eobjects.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
+ode.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathprocessing.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
+ssing.code.tex"
 File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-earrows.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
+de.tex"
 File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eshade.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
+e.tex"
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen177
 \pgf@sys@shading@range@num=\count135
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eimage.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
+e.tex"
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eexternal.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
+code.tex"
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box74
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-elayers.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
+de.tex"
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-etransparency.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
+ncy.code.tex"
 File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epatterns.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
+code.tex"
 File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-shapes.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
+e.tex"
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box75
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-plot.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
+tex"
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
-mp-version-0-65.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen178
 \pgf@nodesepend=\dimen179
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
-mp-version-1-18.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.st
-y
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.s
-ty
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-.code.tex))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.
-code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.te
+x"
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen180
 \pgffor@skip=\dimen181
 \pgffor@stack=\toks28
 \pgffor@toks=\toks29
 ))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tik
-z\tikz.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
+e.tex"
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibr
-aryplothandlers.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
+dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count136
 \pgfplotmarksize=\dimen182
@@ -646,8 +628,8 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikznumberofcurrentchild=\count139
 \tikz@fig@count=\count140
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-matrix.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
+e.tex"
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count141
 \pgfmatrixcurrentcolumn=\count142
@@ -655,11 +637,11 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 )
 \tikz@expandcount=\count144
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tik
-z\libraries\tikzlibrarytopaths.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen189
 \lightrulewidth=\dimen190
@@ -679,144 +661,275 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count148
 \@thisrulewidth=\dimen201
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\units\units.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\units.sty"
 Package: units 1998/08/04 v0.9b Typesetting units
 
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\units\nicefrac.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip72
 \L@UnitsRaiseTextstyle=\skip73
 \L@UnitsRaiseScriptstyle=\skip74
 ))
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\multi-behavior.a
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sidecap\sidecap.sty"
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen202
+\SC@CAPWD=\dimen203
+\SC@tempdima=\dimen204
+\SC@tempdimb=\dimen205
+\c@SC@C=\count149
+\SC@BOX=\box78
+)
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\multi-behavior.a
 ux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 89.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count149
-\scratchdimen=\dimen202
-\scratchbox=\box78
-\nofMPsegments=\count150
-\nofMParguments=\count151
+\scratchcounter=\count150
+\scratchdimen=\dimen206
+\scratchbox=\box79
+\nofMPsegments=\count151
+\nofMParguments=\count152
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count152
-\MPscratchDim=\dimen203
-\MPnumerator=\count153
-\makeMPintoPDFobject=\count154
+\MPscratchCnt=\count153
+\MPscratchDim=\dimen207
+\MPnumerator=\count154
+\makeMPintoPDFobject=\count155
 \everyMPtoPDFconversion=\toks31
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: sidecap package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+lasy on input line 138.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip75
+\RaggedLeftLeftskip=\skip76
+\RaggedRightLeftskip=\skip77
+\CenteringRightskip=\skip78
+\RaggedLeftRightskip=\skip79
+\RaggedRightRightskip=\skip80
+\CenteringParfillskip=\skip81
+\RaggedLeftParfillskip=\skip82
+\RaggedRightParfillskip=\skip83
+\JustifyingParfillskip=\skip84
+\CenteringParindent=\skip85
+\RaggedLeftParindent=\skip86
+\RaggedRightParindent=\skip87
+\JustifyingParindent=\skip88
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 141.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 138.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 141.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 138.
+LaTeX Font Info:    Try loading font information for U+msa on input line 141.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 138.
+LaTeX Font Info:    Try loading font information for U+msb on input line 141.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 138.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 141.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 138.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 141.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 140.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 143.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
 
 Underfull \vbox (badness 1097) has occurred while \output is active []
 
 
 Overfull \vbox (72.27pt too high) has occurred while \output is active []
 
- [1{C:/Users/ksarkar1/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 Non-PDF special ignored!
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \vbox (badness 2617) has occurred while \output is active []
-
-
 Overfull \hbox (117.07582pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:3
  []
 
-[3] [4]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 202.
+[3] <figs/timeline.pdf, id=26, 750.55406pt x 484.05844pt>
+File: figs/timeline.pdf Graphic file (type pdf)
 
+<use figs/timeline.pdf>
+Package pdftex.def Info: figs/timeline.pdf used on input line 197.
+(pdftex.def)             Requested size: 308.08244pt x 568.76758pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 207.
+
+Underfull \hbox (badness 2529) in paragraph at lines 207--207
+[][]\OT1/ptm/b/n/9 : |\OT1/ptm/m/it/9 There are three
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 spec-i-fied cost and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 The avail-able re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 source and the
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 At time $\OML/cmm/m/it/9 t$ \OT1/ptm/m/it/9 the state
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 of the net-work is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 shown. All three
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 neigh-bors of $\OML/cmm/m/it/9 v$ \OT1/ptm/m/it/9 are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 re-cy-cling, two of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 The cor-re-spond-ing
+ []
+
+
+Underfull \hbox (badness 4699) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 lo-cal sig-nal is not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+$\OML/cmm/m/it/9 v$ \OT1/ptm/m/it/9 does not have
+ []
+
+
+Underfull \hbox (badness 5161) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 enough re-source to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 and us-ing pub-lic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 trans-port. But the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 pay-off of re-cy-cling
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 is greater than the
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 207--207
+\OT1/ptm/m/it/9 lic trans-port. So $\OML/cmm/m/it/9 v$
+ []
+
+
+LaTeX Warning: Float too large for page by 0.06758pt on input line 207.
+
+[4]
 Overfull \hbox (117.07582pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:5
  []
 
-[5] [6]
+[5 <C:/Users/Kaushik/Dropbox/Research/Reports/report-docs/tkdd-13/figs/timeline
+.pdf>]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 220.
+ [6]
 Overfull \hbox (117.07582pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:7
  []
 
-[7]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 294.
+[7] [8]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 296.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 312.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 296.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 312.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 296.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 312.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 309.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -824,87 +937,102 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8]
+
 Overfull \hbox (117.07582pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:9
  []
 
 [9] [10]
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
-
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:11
  []
 
-[11] [12]
+[11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
+ [12]
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:13
  []
 
-[13] [14]
+[13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:15
  []
 
 [15] [16]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 684.
-
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:17
  []
 
-[17] [18]
+[17]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 699.
+ [18]
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:19
  []
 
-[19] <coll-dist.pdf, id=95, 525.965pt x 444.66125pt>
-File: coll-dist.pdf Graphic file (type pdf)
- <use coll-dist.pdf>
-Package pdftex.def Info: coll-dist.pdf used on input line 811.
-(pdftex.def)             Requested size: 396.01367pt x 334.79782pt.
-
-<comp.pdf, id=96, 614.295pt x 794.97pt>
-File: comp.pdf Graphic file (type pdf)
- <use comp.pdf>
-Package pdftex.def Info: comp.pdf used on input line 819.
-(pdftex.def)             Requested size: 396.0091pt x 301.72122pt.
- [20]
-Underfull \vbox (badness 1484) has occurred while \output is active []
-
-
+[19] [20]
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:21
  []
 
-[21 <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs/tkdd13/coll-dist.pd
-f>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[21] <coll-dist.pdf, id=516, 525.965pt x 444.66125pt>
+File: coll-dist.pdf Graphic file (type pdf)
+ <use coll-dist.pdf>
+Package pdftex.def Info: coll-dist.pdf used on input line 845.
+(pdftex.def)             Requested size: 396.01367pt x 334.79782pt.
 
- [22 <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs/tkdd13/comp.pdf>]
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\multi-behavior.b
-bl
+<comp.pdf, id=517, 614.295pt x 794.97pt>
+File: comp.pdf Graphic file (type pdf)
+ <use comp.pdf>
+Package pdftex.def Info: comp.pdf used on input line 853.
+(pdftex.def)             Requested size: 396.0091pt x 301.72122pt.
+ [22 <C:/Users/Kaushik/Dropbox/Research/Reports/report-docs/tkdd-13/coll-dist.p
+df>]
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+
 Overfull \hbox (122.07976pt too wide) has occurred while \output is active
 \OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
 ned Network Towards a Desired Distribution of Behaviors? A:23
  []
 
-[23]
+[23 <C:/Users/Kaushik/Dropbox/Research/Reports/report-docs/tkdd-13/comp.pdf>]
+[24]
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\multi-behavior.b
+bl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
+
+Overfull \hbox (122.07976pt too wide) has occurred while \output is active
+\OT1/phv/m/n/9 How Do We Find Early Adopters Who Will Guide a Resource Constrai
+ned Network Towards a Desired Distribution of Behaviors? A:25
+ []
+
+[25]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
@@ -932,19 +1060,19 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-) [24] [1
+) [26] [1
 
 ]
-(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd13\multi-behavior.a
+(C:\Users\Kaushik\Dropbox\Research\Reports\report-docs\tkdd-13\multi-behavior.a
 ux) ) 
 Here is how much of TeX's memory you used:
- 14021 strings out of 494045
- 247751 string characters out of 3145960
- 405398 words of memory out of 3000000
- 16980 multiletter control sequences out of 15000+200000
+ 14198 strings out of 494045
+ 248950 string characters out of 3145964
+ 415947 words of memory out of 3000000
+ 17144 multiletter control sequences out of 15000+200000
  44831 words of font info for 103 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,20n,55p,2064b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,55p,2064b,523s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program 
@@ -976,9 +1104,9 @@ x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on multi-behavior.pdf (25 pages, 439959 bytes).
+Output written on multi-behavior.pdf (27 pages, 656868 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
+ 672 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

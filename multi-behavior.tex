@@ -70,6 +70,9 @@
 % for units.
 \usepackage{units}
 
+% for side captions
+\usepackage{sidecap}
+
 %\newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 
@@ -102,7 +105,7 @@ HARI SUNDARAM
 %       currently affiliated with NASA.
 
 \begin{abstract}
-We identify influential early adopters that achieve a target behavior distribution for a resource constrained social network with multiple costly behaviors. This problem is important for applications ranging from collective behavior change to corporate viral marketing campaigns. In this paper, we propose a model of diffusion of multiple behaviors when individual participants have resource constraints. Individuals adopt the set of behaviors that maximize their utility subject to available resources. We show that the problem of influence maximization for multiple behaviors is NP-complete. Thus we propose heuristics, which are based on node degree, Influence Weight  and Immediate Adoption, to select early adopters. We evaluate the effectiveness under three metrics: unique number of participants, total number of active behaviors and network resource utilization. We also propose heuristics to distribute the behaviors amongst the early adopters to achieve a target distribution in the population. We test our approach on synthetic and real-world topologies with excellent results. Our heuristics produce 15-51\% increase in resource utilization over the na\"ive approach.
+We identify influential early adopters that achieve a target behavior distribution for a resource constrained social network with multiple costly behaviors. This problem is important for applications ranging from collective behavior change to corporate viral marketing campaigns. In this paper, we propose a model of diffusion of multiple behaviors when individual participants have resource constraints. Individuals adopt the set of behaviors that maximize their utility subject to available resources. We show that the problem of influence maximization for multiple behaviors is NP-complete. Thus we propose different heuristics based on node degree, Influence Weight  and Immediate Adoption to select early adopters. We evaluate the effectiveness under three metrics: unique number of participants, total number of active behaviors and network resource utilization. We also propose heuristics to distribute the behaviors amongst the early adopters to achieve a target distribution in the population. We test our approach on synthetic and real-world topologies with excellent results. Our heuristics produce 15-51\% increase in resource utilization over the na\"ive approach.
 \end{abstract}
 
 \category{J.4}{Social and Behavioral Sciences}{}
@@ -160,7 +163,7 @@ In this paper, we develop a model of multiple behavior diffusion that captures t
 
 We develop several heuristics to identify seeds that maximize the expected resource utilization in the network. These heuristics are necessary since we show that the problem of seed selection to maximize expected utilization is NP-complete. We also develop a heuristic to address a simple question: how do we distribute behaviors amongst the seeds to achieve a target behavior distribution? We test our approach on synthetic and real-world topologies with excellent results. We show that two heuristics that evaluate Influence Weight  and Immediate Adoption provide very good solutions to the seed selection problems. We show that setting the seed behavior distribution to be proportional to the target behavior distribution produces excellent results. Our heuristics produce 15-51\% increase in resource utilization over the na\"ive approach.
 
-The rest of the paper is organized as follows. In the next section we review the relevant literature. In Section~\ref{sec:problem} we formally define our behavior diffusion model and the set of problems that we address in the paper. In Section~\ref{sec:heuristics} we define the main seed selections heuristics. In Section~\ref{sec:dist} we discuss different behavior distributions that we will test. In Section~\ref{sec:sim-exp} we describe the simulation experiments and the results. In Section~\ref{sec:disc} we discuss open issues and extensions.  Finally,  we present our conclusions in Section~\ref{sec:conclusion}.
+The rest of the paper is organized as follows. In the next section we review the relevant literature. In Section~\ref{sec:model} we formally define our behavior diffusion model. In Section~\ref{sec:seed-selection} we define the seed selection problem, present different heuristics and compare their performance. In Section~\ref{sec:dist} we discuss different behavior distribution strategies and present simulation results. In Section~\ref{sec:target-dist} discuss how to achieve a target distribution of behaviors in the network. In Section~\ref{sec:disc} we discuss open issues and extensions.  Finally,  we present our conclusions in Section~\ref{sec:conclusion}.
 
 \section{Related Work}
 The literature on social diffusion processes in vast. Diffusion of innovation was studied in \cite{rogers62}. Subsequent work on modeling such processes through epidemiological models was carried out by \cite{bass69} which became well known as the \textit{Bass Diffusion Model} in the management sciences community. Another approach of explaining such processes through threshold based models were made popular by \cite{granovetter83}. In recent years the study of diffusion modeling has seen substantial development. \cite{Watts02} presents a threshold based model of global cascades and analyzes why certain networks may appear to be ''robust'' yet turn out to be fragile against such cascades.
@@ -171,10 +174,10 @@ Our work is informed by these literature, but is markedly different in a number 
 
 Next we mention a few interesting critiques of the study of social diffusion. The study of social diffusion and information contagion has met with its fair share of criticism. \cite{Aral09} argues that in their observational study more than $50\%$ of the perceived behavior contagion can be attributed to homophily instead of social influence. However \cite{shalizi11} have shown that homophily and social influence are generically confounded in social diffusion processes and it in general not easy to distinguish between the two effects. We have tried to take this observation into account while developing our model where. In our model the diffusion process is not exclusively driven by the social influence effects but an individual's intrinsic characteristics (i.e. resource constraint) also plays an important part in the adoption decision making.  An important critique of the study of modeling mass adoption through epidemic like contagion models is put forward by \cite{Goel12}. They have analyzed a number of real world product diffusion events and found out that in most of the cases the diffusion stops within one degree of the initial adopting seed, thus drawing a sharp contrast with multi-step person to person contagion of influence. It is however unclear if their findings will generalize to collective action problems, where participating individuals express interest in adopting a behavior (e.g. eating healthy foods, take a flu shot). As we discuss in our open issues section (Section~\ref{sec:disc}), there may be confounding effects between the communication problem and the decision making problem. That is, behavioral diffusion can halt in the presence of poor communication.
 
-\section{Problem Definition}\label{sec:problem}
-In this section we introduce our behavior diffusion model and the computational problem that we will address. In the following sections first we shall present our model of multiple behavior diffusion in resource constrained networks. Then, we shall introduce metrics, including resource utilization, unique participation and behavior adoption to evaluate the behavior adoption.  Finally, we shall discuss the problem of selecting the early adopters, and the concomitant issue of distribution of behaviors across the adopters.
+\section{Models of Behavior Adoption under Resource Constraint}\label{sec:model}
+In this section we introduce our behavior diffusion models. First we will describe our model of multiple behavior diffusion in a resource constrained network in the most general form. Next we will present a simplified version of the general model which will provide us with some analytical insight into the algorithmic problems to be defined in the next section. Then we will introduce metrics, including resource utilization, unique participation and number of behavior adoptions to evaluate the behavior adoption process.
 
-\subsection{A Model of Multiple Behavior Diffusion in a Resource Constrained Social Network} \label{sub-sec:model}
+\subsection{A General Model of Multiple Behavior Diffusion in a Resource Constrained Social Network} \label{sub-sec:model}
 We now describe the model for each user, the properties of each behavior and the behavior adoption process. We represent the social network with an undirected graph $G=(V,E)$. Each node $v \in V$ of the graph $G$ represents an individual and an edge $e \in E$ between two nodes indicate a social relationship between the two individuals. 
 
 We wish to spread $k$ behaviors in the social network. Each behavior $i$ has an associated cost $c^i$ and a utility $u^i$. The cost refers to the cost of adoption and the utility refers to the intrinsic utility gained by an individual by adopting this behavior. In a simplification, we assume that both the cost $c^i$ and the utility $u^i$ of behavior $i$ are intrinsic to the behavior and independent of the individual who adopts the behavior. Without loss of generality, we assume that $0 \leq c^i, u^i \leq 1$.
@@ -188,7 +191,22 @@ The behavior diffusion process continues until no additional adoption is possibl
 
 In our diffusion model, we assume that the total resources available $r(v)$ at each node  are known, while the threshold for adoption $\theta$ for any behavior is unknown. This assumption is reasonable if when people are willing to make public their available resources to participate in a set of behaviors. This can arise say in a private, mobile social network app focused on adoption of healthy behaviors including wellness, healthy eating and exercise, where individuals join the network to participate in healthy behaviors but each individual is resource limited. An individual may declare that she has only one hour to spend on exercise each week, but would like to be nudged to participate in a health-related activity.
 
-\subsection{A Simplified Model}
+Figure \ref{fig:model} shows an illustration of the dynamics with a four node network where three different behaviors - recycling, using public transport and using stairs are spreading.
+
+\begin{SCfigure}
+    \includegraphics[viewport=3.5in 1in 6.75in 7in, width=\columnwidth]{figs/timeline}
+    \caption{There are three behaviors - recycling, public transport and using stairs with the specified cost and utility. 
+    \vspace{0.1in} \\
+    The available resource and the thresholds of the node $v$ in the network are also specified. 
+    \vspace{0.1in} \\
+    At time $t$ the state of the network is shown. All three neighbors of $v$ are recycling, two of them are using public transport and one of them are using stairs. The corresponding influence weights are also shown.
+    \vspace{0.1in} \\
+    For the third behavior i.e. using stairs, the local signal is not strong enough. So it will not be considered for adoption.
+    \vspace{0.1in} \\
+    $v$ does not have enough resource to adopt both recycling and using public transport. But the payoff of recycling is greater than the payoff of using public transport. So $v$ adopts only recycling in this time step. }\label{fig:model}
+\end{SCfigure}
+
+\subsection{A Simplified Sticky Model} \label{sub-sec:simple-model}
 In this section we present a simplified version of the multiple behavior diffusion model defined in the previous section. Although the previous model makes fewer assumptions and is a more faithful representation of reality, it is cumbersome to deal with analytically. The simplified model, which we will call the "Sticky" model, makes stricter assumptions and affords us some interesting analytical insights on the fundamental processes of the multiple behavior diffusion phenomena.
 
 The main difference between the simplified model and the original model is in the temporal unfolding of the diffusion process. Unlike the original model, in the simplified model once a node adopts a behavior at some time step, it does not get rid of that behavior in the subsequent time steps. The behavior adoption is \textit{progressive} \cite{Kempe03}. So once a behavior is adopted by a node, it "sticks" with that node (hence the name \textit{Sticky} model). At each time step each node selects the candidate behaviors for adoption from only those behaviors that are not already adopted by that node. Otherwise the selection criteria are the same as the original model. The node then adopts the set of candidate behaviors that maximize his payoff subject to the constraint that the combined cost of the newly adopted behaviors is less than the remaining resource of the node. 
@@ -208,27 +226,25 @@ In contrast to total participation, we need to keep track of the total number ad
 This metric captures the \textit{efficiency} of the network to adopt costly behaviors. 
 Not all resources available in a social network may be used for behavior adoption. This is  because individuals have variable resources, and they may be unable to adopt the subset of behaviors that fully takes advantage of their desire to participate because of two reasons. First, they may have many more resources than needed to adopt a behavior. Second, if their friends have limited resources, then the social signals that they receive will be about adopting low-cost resources, and hence a particular individual may never see costly behaviors in their social circle that they could potentially adopt.  let us assume that a node $v$ with resource $r(v)$ has adopted one or more behaviors. At the end of the diffusion process this individual has adopted a set of behaviors with total cost of adoption $s$, where  $s \le r(v)$. Therefore the individual has $r(v)-s$ amount of his resource remaining unused. \textit{Resource utilization} is the expected ratio of total utilized resource to the total amount of available resource of all the individuals in the social network. 
 
-\subsection{The Seed Selection Problem}
-There are two key problems: we need to identify the set of early adopters or seed nodes and we need to determine which behaviors ought to be adopted by each seed node. We assume that the number of initial adopters is small in comparison to the size of the network. This is reasonable as it corresponds to an advertiser with a finite budget to persuade the seeds to adopt. The behaviors adopted by the set of seed nodes have different implications on the metrics. If all nodes adopted the least costly behavior, for example, we would expect total participation to increase, but low resource utilization. The converse would be true in the case when seed nodes chosen such that all adopt the most expensive behavior. Next, we identify four subproblems; the first two refer to seed identification while the last two are concerned with behavior distribution in the seeds.
+\section{The Seed Selection Problem} \label{sec:seed-selection}
+In this section we introduce the first algorithmic problem that we want to address in the context of multiple behavior diffusion in a resource constrained social network. This problem is called \textit{seed selection} problem. In the next section we will formally define this problem. Then we will describe and analyze different strategies for solving the problem. Then we will provide experimental evaluation of those strategies on synthetic as well as real world social networks.
+
+\subsection{Problem Definition}
+There are two key problems: we need to identify the set of early adopters or seed nodes and we need to determine which behaviors ought to be adopted by each seed node. We assume that the number of initial adopters is small in comparison to the size of the network. This is reasonable as it corresponds to an advertiser with a finite budget to persuade the seeds to adopt. Here we identify two subproblems which are related to seed identification. To simplify things, in this section we will assume that the behaviors are uniformly distributed over the seed set.
+
+Next, we identify four subproblems; the first two refer to seed identification while the last two are concerned with behavior distribution in the seeds.
 
 \subsubsection{P1: Resource Utilization Maximization:} Given a fixed seed budget $b$ and a fixed distribution of behaviors in the seed set, we want to select $b$ nodes in the network such that the resource utilization metric is maximized.
 
 \subsubsection{P2: Total Participation (or Adoption) Maximization:} Given a fixed seed budget $b$ and a fixed distribution of behaviors in the seed set, we are interested in finding $b$ nodes in the network that maximize the total participation (or total adoption) in the network.
 
-\subsubsection{P3: Determination of Optimum Behavior Distribution in the Seed Set:} Given a fixed seed budget $b$ and a lower bound on the number of adoptions of the lowest cost behavior $s_{min}$ (or a lower bound on the total participation $S_{min}$), what is the optimum distribution of behaviors in the seed set and the optimum set of $b$ seeds that will maximize the resource utilization while maintaining expected spread of $s_{min}$ for the lowest cost behavior (or $S_{min}$ for the total participation).
-
-%\textbf{problem P3 is unclear; what is $s_{min}$?}
-
-\subsubsection{P4: Obtaining Desired Distribution of Behaviors:} Given a fixed seed budget $b$, and a given fixed target distribution of behaviors $q$, how do we identify the $b$ seeds and the initial distribution of behaviors $p$ such that final distribution $p_T$ at time $T$ of behaviors in the population matches the target distribution $q$?
-
-
-\section{Which Nodes Do We Pick?} \label{sec:heuristics}
-In this section we develop heuristics to pick seed nodes to address each of the four seed selection problems. First we show that the seed selection problem is NP-complete. Then, we develop heuristics based on node degree, Influence Weight  and Immediate Adoption.
+\subsection{Which Nodes Do We Pick?} \label{sub-sec:heuristics}
+In this section we develop algorithms and heuristics to pick seed nodes to address the seed selection problems. First we show that the seed selection problem is NP-complete. Next we show that it is possible to construct an approximation algorithm with good approximation guarantee for the seed selection problem for the Sticky model. Then, we will develop heuristics based on node degree, Influence Weight  and Immediate Adoption for the general behavior diffusion model under resource constraint.
 
 \subsection{NP-Completeness}\label{sec:NP}
 It can be easily shown that the optimization problems P1 and P2 are NP-complete. We show that influence maximization problem for LT model, which is proven to be an NP-complete problem \cite{Kempe03}, is a special case of P1. Let the number of behaviors $k=1$ and the cost of adoption of that behavior is also $1$. Each node $v$ is allocated resource $r(v)=1$. For these values of the parameters our multiple behavior diffusion model reduces to the LT model of influence propagation and resource utilization can be calculated as the ratio of the spread and total number of nodes in the network. So maximizing the resource utilization translates into maximizing the spread. Same transformation applies to problem P2 also since total participation (and total adoption) is identical to the spread in the one behavior case. Next, we propose a number of heuristics to solve the problem.
 
-\subsection{Approximation Algorithm for the Sticky Model}
+\subsection{Approximation Algorithm for the Sticky Model} \label{sub-sec:approx-algo}
 In this section we will provide an approximation algorithm for the problem P2 (total participation maximization) under the simplified Sticky model of multiple behavior diffusion. Note that all the three problems - P1, P2 and P3 are still NP-hard in the Sticky model. We will achieve our goal by first showing that the total participation function satisfies a property called submodularity which will lead us to the construction of a standard approximation algorithm for the problem.
 
 \subsubsection{Submodularity of Total Participation}
@@ -327,8 +343,10 @@ Return $(u,s(u))$;
 \label{algo:Core-Greedy} 
 \end{algorithm}
 
+Next we describe seed selection heuristics based on node degree, influence weight and expected immediate adoption for the general behavior adoption model.
+
 \subsection{Node Degree}
-The social capital of an individual increases with increase in number of acquaintances. While the the nature of the connections and the specific structure of the network in which an individual is embedded matters, we can assume the node degree as a first order approximation to the ``influence'' of an individual. Hence heuristics based on node degree exploit this idea. We first discuss the basic heuristic and present some useful variants.
+In this section we develop heuristics for the general behavior diffusion model under resource constraint that are based on degree of a node. The social capital of an individual increases with increase in number of acquaintances. While the nature of the connections and the specific structure of the network in which an individual is embedded matters, we can assume the node degree as a first order approximation to the ``influence'' of an individual. Hence heuristics based on node degree exploit this idea. We first discuss the basic heuristic and present some useful variants.
 
 \subsubsection{Na\"ive:} In this variant we rank the nodes according to their degree and assign them different behaviors. This is a na\"ive extension of the high degree heuristic for the LT model \cite{Kempe03}. We test three variants of this heuristic. In the first variant, \textit{na\"ive degree with random tie breaking and no top up} (see Algorithm~\ref{algo:naive-rand-no-topup}) variant each seed node is assigned exactly one randomly chosen behavior only if its resource is sufficient for the cost of adoption of the behavior. In the second variant \textit{na\"ive degree with random tie breaking and top up}  each seed node is always assigned one randomly chosen behavior irrespective of its resource level. If its resource is not sufficient for adoption of the behavior we top up its resource so that it can bear the cost of adoption of the assigned behavior. In the third variant \textit{na\"ive degree with knapsack tie breaking}, each seed node is assigned all the behaviors that will maximize its utility subject to its resource constraint---each node will solve a knapsack problem to decide which set of behaviors to adopt. Notice that degree based heuristics are optimistic---it is possible that seed neighbors do not have resources to adopt the behavior of the seed.
 
@@ -518,8 +536,8 @@ Let $T^i:=\phi$\;
 \label{algo:Core-One-Step-Hill-Climbing}
 \end{algorithm}
 
-\subsection{Immediate Adoption}
-We define \textit{Immediate Adoption(IA)} of a seed set $\mathbf{S}$ for behavior $i$, denoted by $\mathrm{IA}^i(\mathbf{S})$, as the expected number of nodes who will adopt behavior $i$ in the next time step. Notice that the exact computation of \textit{total} number of adoptions at the completion of the behavior diffusion process is \#P-hard for the LT model \cite{Chen10}. However we can compute the $\mathrm{IA}^i(\mathbf{S})$ exactly for our model since it is the expected number of adoptions after exactly one time step. For each neighbor $u$ of the seed set $\mathbf{S}$ we would run the adoption decision process (which is equivalent to solving a knapsack problem) and compute the probability that it will adopt behavior $i$ in the next time step. See Appendix \ref{sec:ia-comp} for a detailed example of this computation. Since the adoption decision processes at each neighbor $u$ are independent, we can compute $\mathrm{IA}^i(\mathbf{S})$ by summing over this probability for all the neighbors $u$ of the seed set $\mathbf{S}$. 
+\subsection{Expected Immediate Adoption}
+We define \textit{Expected Immediate Adoption(EIA)} of a seed set $\mathbf{S}$ for behavior $i$, denoted by $\mathrm{IA}^i(\mathbf{S})$, as the expected number of nodes who will adopt behavior $i$ in the next time step. Notice that the exact computation of \textit{total} number of adoptions at the completion of the behavior diffusion process is \#P-hard for the LT model \cite{Chen10}. However we can compute the $\mathrm{IA}^i(\mathbf{S})$ exactly for our model since it is the expected number of adoptions after exactly one time step. For each neighbor $u$ of the seed set $\mathbf{S}$ we would run the adoption decision process (which is equivalent to solving a knapsack problem) and compute the probability that it will adopt behavior $i$ in the next time step. See Appendix \ref{sec:ia-comp} for a detailed example of this computation. Since the adoption decision processes at each neighbor $u$ are independent, we can compute $\mathrm{IA}^i(\mathbf{S})$ by summing over this probability for all the neighbors $u$ of the seed set $\mathbf{S}$. 
 %Hence $v$ exerts a social influence of weight $1/|N(u)|$ on $u$. If $v$ is the only active seed in the network then the probability that $u$ will become active in the next time step is $1/|N(u)|$. This is because we have assumed that $u$'s threshold $\theta$ is assigned a value from a uniformly distributed random variable $U(0,1)$. Hence the expected number of adoptions after one time step, given that $v$ is the only active node at the beginning is $\scriptstyle1 + \sum_{u \in N(v)} \frac{1}{|N(u)|}$. For the multiple behavior case we will restrict the summation over those neighbors $u$ that have enough resource to adopt behavior $i$. We call this metric \textit{expected one step adoption of behavior $i$} and denote it by $e^i(v)$. 
 Notice that the two-step or the three-step adoption probabilities are much more difficult to compute exactly --- we would need to simulate the stochastic process to evaluate these two cases. The simulation will significantly increase the computation cost. Our Immediate Adoption based heuristic builds up the seed set incrementally by assigning the behavior to the seed that provides the maximum marginal increase to the Immediate Adoption value.
 
@@ -540,14 +558,14 @@ Let $V':=V$ and $\mathbf{S:=}\boldsymbol{\phi}$\;
            Set $r(v):=c^{i_{max}}$\;
        } 
    } 
-   \caption{Incremental Immediate Adoption Based Heuristic} 
+   \caption{Incremental Expected Immediate Adoption Based Heuristic} 
    \label{algo:inc-IA-S-T}
 \end{algorithm} 
 
 \begin{algorithm}[h]
 \SetAlgoNoLine 
 \KwIn{$i$ - the behavior, $b[i]$ - number of seeds required for the $i$th behavior, $\mathbf{S}$ - the set of already selected seeds for all the behaviors, $V'$ - the remaining population of nodes to choose new seeds from} 
-\KwOut{$(u,s)$ - if $b[i]$ is not zero then a tuple consisting of the best choice of next seed from the population $V'$ for the $i$th behavior, given the already selected seedset $\mathbf{S}$ and its corresponding Immediate Adoption value}
+\KwOut{$(u,s)$ - if $b[i]$ is not zero then a tuple consisting of the best choice of next seed from the population $V'$ for the $i$th behavior, given the already selected seedset $\mathbf{S}$ and its corresponding Expected Immediate Adoption value}
 
 \If {$b[i] = 0$} {
     Return (`nobody',$0$)
@@ -562,7 +580,7 @@ Return $(u,s(u))$;
 \end{algorithm}
 
 \subsection{Greedy Approximation (KKT)}
-\cite{Kempe03} presents a greedy approximation algorithm with approximation guarantee of $63$\% for the LT model and single behavior case. We modify their approximation algorithm for the multiple behavior case and call it KKT algorithm after the authors of the paper. The algorithm is very similar in structure to our Immediate Adoption based heuristic \ref{algo:inc-IA-S-T}. But instead of using Immediate Adoption for selecting seeds, this algorithm uses \textit{Total Participation}. Since exact computation of Total Participation is \#P-hard, this value is estimated using simulation. Due to the high computational cost involved in the simulation this algorithm is not scalable to large sized networks.
+\cite{Kempe03} presents a greedy approximation algorithm with approximation guarantee of $63$\% for the LT model and single behavior case. In section \ref{sub-sec:approx-algo} we have shown that a modified version of this algorithm provides us with the same approximation guarantee for the simplified Sticky Model. We apply the same algorithm for seed selection in the general behavior diffusion model under resource constraint. Since we did not prove the approximation guarantee for this algorithm under the general model, we use it as a heuristic. We call this heuristic KKT heuristic after the authors of the original paper. This heuristic is very similar in structure to our Immediate Adoption based heuristic \ref{algo:inc-IA-S-T}. But instead of using Immediate Adoption for selecting seeds, this algorithm uses \textit{Total Participation}. Since exact computation of Total Participation is \#P-hard, this value is estimated using simulation. Due to the high computational cost involved in the simulation this algorithm is not scalable to large sized networks.
 
 \subsection{Variations on the Theme}
 There are a number of variations possible in the way we select seeds. The first being whether we \textit{top up} the resource of a selected seed or not. \textit{Topping up} a seed means providing him with additional resource to adopt the behavior in case it didn't already possess enough resource. This corresponds to real life events like providing the early campaigner with free items, gift coupons or other free services like free access to recycling facilities etc. Depending on whether we allow seeds to be topped up or not we have two variations of the seed selection algorithm - \textit{Topped Up} (suffix \textbf{T} is added to the name of the algorithm) and \textit{No Top Up} (suffix \textbf{NT} is added). In the \textbf{NT} version only the nodes with sufficient resource for adopting a behavior are considered as candidates for seed selection. On the other hand in the \textbf{T} version all the nodes\footnote{Whose total resource will not exceed the normalization of 1.0 if extra resource is added for the adoption of the behavior} are considered as possible candidates.
@@ -571,21 +589,18 @@ Another variation is possible depending on whether a node can be selected as a s
 
 Combining these two types of variations we can have four different variants of each seed selection algorithm - \textbf{S-T}, \textbf{S-NT}, \textbf{M-T} and \textbf{M-NT}. In this paper most of the results are for the \textbf{S-T} variant. However in Appendix \ref{sec:t-nt-comp} we present some results comparing these different variations of the seed selection algorithm and discuss a few consequences.
 
-\section{How Do We Distribute the Behaviors?} \label{sec:dist}
-It should be noted that in the case of multiple behavior diffusion metrics like resource utilization, total participation and total adoption depends not only on the choice of the seeds but also on the distribution of the different behaviors in the chosen seed set. We test following five different distributions of the behaviors in the seed set. In the \textit{highest cost behavior only} distribution we allocate all the seeds to the highest cost behavior and none to the other behaviors. In the \textit{proportional to cost} distribution the behaviors are distributed over the seeds in the ratio of their costs. \textit{Uniform} distribution divides the seeds equally amongst all the behaviors. In the \textit{Inversely proportional to cost} behavior distribution behaviors are distributed over the seeds in the inverse ratio of their costs. So the highest cost behavior gets the lowest number of seeds and the lowest cost behavior gets the highest number of seeds. Finally, in the \textit{lowest cost behavior only} distribution all the seeds are assigned to the lowest cost behavior and no seeds are given to the other behavior.  In problem P4 we are interested in achieving a target distribution. One heuristic is to assign the target distribution as the starting behavior distribution to over the seeds.
+\subsection{Simulation Experiments} \label{sub-sec:sim-exp}
+In this section we describe different simulation experiments and compare the effectiveness of our proposed heuristics for the seed selection problem. We have implemented the multiple behavior diffusion model described in Section~\ref{sub-sec:model} and the heuristics discussed in Section~\ref{sub-sec:heuristics} in the NetLogo Programming environment~\cite{Wilensky99}. In the following experiments we have assumed that we want to spread three behaviors ${b_1, b_2, b_3}$ with costs $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$. We have assumed that behavior utility is proportional to cost. Hence our nominal utility values for the corresponding behaviors are $u^1=0.2$, $u^2=0.5$ and $u^3=0.7$. Finally, we assume that individuals' resources are independent and identically distributed i.e the resource $r(v)$ is uniformly distributed random variable $U(0,1)$ for all $v \in V$.
 
-\section{Simulation Experiments} \label{sec:sim-exp}
-In this section we describe different simulation experiments and compare the effectiveness of our proposed heuristics for seed selection and and for behavior distribution over seeds. We have implemented the multiple behavior diffusion model described in Section~\ref{sub-sec:model} and the heuristics discussed in Section~\ref{sec:heuristics} in the NetLogo Programming environment~\cite{Wilensky99}. In the following experiments we have assumed that we want to spread three behaviors ${b_1, b_2, b_3}$ with costs $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$. We have assumed that behavior utility is proportional to cost. Hence our nominal utility values for the corresponding behaviors are $u^1=0.2$, $u^2=0.5$ and $u^3=0.7$. Finally, we assume that individuals' resources are independent and identically distributed i.e the resource $r(v)$ is uniformly distributed random variable $U(0,1)$ for all $v \in V$.
-
-\subsection{Network Topologies}
+\subsubsection{Network Topologies}
 We have used synthetic networks as well as a large real-world network for our experiments.  We synthesize network topologies through three social network generation models: preferential attachment \cite{barabasi99}; Small-world \cite{watts98} and spatially clustered \cite{Stonedahl08}. All the synthetic networks have $500$ nodes. In the preferential attachment network each new coming node adds one link to one of the existing nodes according to the in-degree distribution. The small world network formation starts with a regular circular lattice where each node is connected to next two nodes in the circular order. In the rewiring stage each edge is rewired with probability $p=0.2$. In the spatially clustered network average node degree is set to $10$. The three synthetic networks exhibit all the important properties---low effective diameter, power law degree distribution and high clustering---found in real world social networks. The real world data set is the ca-GrQc collaboration network form the SNAP network database \cite{Leskovec07a}. It is a collaboration network amongst authors who submitted their papers to the General Relativity and Quantum Cosmology category of e-print arXiv.org database. This network has $5242$ nodes and $28980$ edges.
 
 The network types are abbreviated in the tables with experimental results as follows: PA (Preferential Attachment);  SW (Small World); SC (Spatially Clustered); COLL (the ca-GrQc collaboration network form the SNAP network database).
  
-\subsection{Seed Selection}
-In this section we compare the seven seed selection heuristics described in Section~\ref{sec:heuristics} for different network topologies.  For the seed selection experiments, we fix the behavior distribution over the seeds: the behaviors are assumed to be uniformly distributed over the seeds. We use a specific fraction $\alpha$ of the population as seeds. In this experiment, we have used $\alpha=0.1$. This means that for synthetic networks, we use $b=51$ seeds\footnote{the number of seeds is a multiple of 3, since we have 3 test behaviors}, and $b=501$ for the real-world network. All the results discussed in this section are for the \textbf{S-T} variant of the algorithm\footnote{In Appendix \ref{sec:t-nt-comp} we present the result of comparison between the different variants}.
+\subsubsection{Empirical Evaluation}
+In this section we compare the seven seed selection heuristics described in Section~\ref{sub-sec:heuristics} for different network topologies.  For the seed selection experiments, we fix the behavior distribution over the seeds: the behaviors are assumed to be uniformly distributed over the seeds. We use a specific fraction $\alpha$ of the population as seeds. In this experiment, we have used $\alpha=0.1$. This means that for synthetic networks, we use $b=51$ seeds\footnote{the number of seeds is a multiple of 3, since we have 3 test behaviors}, and $b=501$ for the real-world network. All the results discussed in this section are for the \textbf{S-T} variant of the algorithm\footnote{In Appendix \ref{sec:t-nt-comp} we present the result of comparison between the different variants}.
 
-The eight heuristics are abbreviated in the experimental results tables as follows: H1 (Random); H2 (Na\"ive Degree---No Top-up); H3 (Na\"ive Degree---Knapsack); H4 (Na\"ive Degree---Top-up); H5 (Degree and Resource Ranked), H6 (Influence Weight ---Ranked), H7 (Influence Weight ---Hill Climbing), H8 (Immediate Adoption).
+The eight heuristics are abbreviated in the experimental results tables as follows: H1 (Random); H2 (Na\"ive Degree---No Top-up); H3 (Na\"ive Degree---Knapsack); H4 (Na\"ive Degree---Top-up); H5 (Degree and Resource Ranked), IWR (Influence Weight ---Ranked), IWH (Influence Weight ---Hill Climbing), EIA (Expected Immediate Adoption).
 
 
 \begin{table}[htb]\footnotesize
@@ -600,13 +615,13 @@ The eight heuristics are abbreviated in the experimental results tables as follo
     \end{tabular}
 
 \end{table}
-Since seed selection sub-problems P2 and P3 are NP-complete (ref. Section~\ref{sec:heuristics}), determining the maximum possible utilization or total participation in the network for the given value of $b$ under uniform behavior distribution is computationally intractable. However, we can estimate the value of maximum possible utilization in the network if we assume that $b=N$, the case when each network node is a seed. First the nodes in the network adopt the subset of behaviors that maximizes their payoff subject to the resource constraint.  Then we let the diffusion process run till the network reaches equilibrium. The expected value of the resource utilization at this point will upper bound of resource utilization in that network and enables comparison with our heuristics. Table \ref{tab:max-util} provides the value of this maximum possible utilization for different networks. Notice that for three behaviors with costs $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$, it is straightforward to show that the maximum utilization will be bounded by the value 0.78, assuming that the thresholds are obtained from $U(0,1)$. The fact that the simulation results are slightly lower that 0.78 is because nodes will ``align'' with their neighbors over time due to the social influence.
+Since seed selection sub-problems P2 and P3 are NP-complete (ref. Section~\ref{sub-sec:heuristics}), determining the maximum possible utilization or total participation in the network for the given value of $b$ under uniform behavior distribution is computationally intractable. However, we can estimate the value of maximum possible utilization in the network if we assume that $b=N$, the case when each network node is a seed. First the nodes in the network adopt the subset of behaviors that maximizes their payoff subject to the resource constraint.  Then we let the diffusion process run till the network reaches equilibrium. The expected value of the resource utilization at this point will upper bound of resource utilization in that network and enables comparison with our heuristics. Table \ref{tab:max-util} provides the value of this maximum possible utilization for different networks. Notice that for three behaviors with costs $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$, it is straightforward to show that the maximum utilization will be bounded by the value 0.78, assuming that the thresholds are obtained from $U(0,1)$. The fact that the simulation results are slightly lower that 0.78 is because nodes will ``align'' with their neighbors over time due to the social influence.
 
 There are two sources of randomness in the synthetic network generation models:  behavior adoption thresholds at each individual for each behavior and network topology. Since each aspect is independent of the other, we have conducted two different types of simulations. In the first, we pick an arbitrary topology and vary individual thresholds over the different simulation runs. We term this as \textit{threshold average}. In the second type of simulation, we fix the individual thresholds, obtained from the uniform distribution, and vary the topologies over the simulations. We term this as \textit{network average}. Notice that the real-world dataset---ca-GrQc network---has a fixed topology and hence only one type of randomness: variation of the individual thresholds.  We use $5000$ independent runs of the diffusion process to obtain stable estimates for both threshold and network types of simulations.
 
 \begin{table}[htb]\footnotesize
 \centering
-    \caption{Resource Utilization under Threshold / Network Average. Both versions of the Influence Weight , heuristics H6, H7 give excellent results. The differences between the heuristics for the same type of average are statistically significant.}\label{tab:seed-selection-util}
+    \caption{Resource Utilization under Threshold / Network Average. Both versions of the Influence Weight , heuristics IWR, IWH give excellent results. The differences between the heuristics for the same type of average are statistically significant.}\label{tab:seed-selection-util}
     \begin{tabular}{ccccc} \toprule
         Heuristics & PA & SW & SC & COLL \\ \midrule
         H1 & 0.12 / 0.14 & 0.15 / 0.15  & 0.16 / 0.16 & 0.14 / -\\
@@ -614,17 +629,17 @@ There are two sources of randomness in the synthetic network generation models: 
         H3 & 0.28 / 0.30 & 0.17 / 0.17 & 0.16 / 0.17 & 0.18 / -\\
         H4 & 0.32 / 0.33 & 0.17 / 0.17 & 0.17 / 0.18 & 0.19 / - \\
         H5 & 0.35 / 0.36 & 0.21 / 0.21 & 0.18 / 0.19 & 0.20 / - \\
-        \textbf{H6} & 0.37 / 0.38 & 0.21 / 0.22 & 0.20 / 0.21& 0.28 / -\\
-        \textbf{H7} & 0.37 / 0.38 & 0.22 / 0.22 & 0.21 / 0.22& 0.29 / -\\ 
-        \textbf{H8} & 0.34 / 0.34 &  0.22/ 0.23 &  0.21 / 0.22 & - / -\\ \bottomrule
+        \textbf{IWR} & 0.37 / 0.38 & 0.21 / 0.22 & 0.20 / 0.21& 0.28 / -\\
+        \textbf{IWH} & 0.37 / 0.38 & 0.22 / 0.22 & 0.21 / 0.22& 0.29 / -\\ 
+        \textbf{EIA} & 0.34 / 0.34 &  0.22/ 0.23 &  0.21 / 0.22 & - / -\\ \bottomrule
     \end{tabular}
 \end{table}
 
-Table \ref{tab:seed-selection-util} shows the estimated resource utilization of different networks for threshold and network average simulations for each of the eight seed selection heuristics. The two Influence Weight  heuristics (H6, H7) show the highest expected utilization. The differences between the heuristics (H6, H7) and the other heuristics are statically significant ($p < 0.01$) for the same type---threshold or network---of simulation. The table also reveals an expected result: the network average and the threshold averages are nearly identical for the same heuristic. 
+Table \ref{tab:seed-selection-util} shows the estimated resource utilization of different networks for threshold and network average simulations for each of the eight seed selection heuristics. The two Influence Weight  heuristics (IWR, IWH) show the highest expected utilization. The differences between the heuristics (IWR, IWH) and the other heuristics are statically significant ($p < 0.01$) for the same type---threshold or network---of simulation. The table also reveals an expected result: the network average and the threshold averages are nearly identical for the same heuristic. 
 
 \begin{table}[htb]\footnotesize
     \centering
-    \caption{Total Participation / Total Adoption under Threshold average as \% of the network size. Both versions of the Influence Weight heuristics H6, H7 and Immediate Adoption heuristic H8 give excellent results. The differences between the heuristics for the same type of average are statistically significant.}\label{tab:seed-selection-adoption}
+    \caption{Total Participation / Total Adoption under Threshold average as \% of the network size. Both versions of the Influence Weight heuristics IWR, IWH and EIA heuristics give excellent results. The differences between the heuristics for the same type of average are statistically significant.}\label{tab:seed-selection-adoption}
     \begin{tabular}{ccccc} \toprule
         Heuristics & PA & SW & SC & COLL \\ \midrule
         H1 & 14.0 / 14.1 & 17.7 / 18.0 & 20.1 / 20.6 & 17.3 / 17.6 \\
@@ -632,30 +647,30 @@ Table \ref{tab:seed-selection-util} shows the estimated resource utilization of 
         H3 & 31.6 / 35.7 & 19.1 / 21.3 & 18.6 / 20.7 & 22.2 / 23.4 \\
         H4 & 37.5 / 38.0 & 21.3 / 21.9 & 21.1 / 21.8 & 22.6 / 23.8 \\
         H5 & 41.3 / 41.6 & 24.7 / 25.4 & 22.9 / 23.4 & 22.5 / 23.3 \\
-        \textbf{H6} & 45.0 / 45.2 & 25.0 / 25.3 & 25.8 / 26.3 & 34.8 / 35.9 \\
-        \textbf{H7} & 44.0 / 44.4 & 25.9 / 26.4 & 25.7 / 26.3 & 35.5 / 36.6 \\ 
-        \textbf{H8} & 51.3 / 52.1 & 26.9 / 27.5 & 27.6 / 28.4 & - / -\\ \bottomrule
+        \textbf{IWR} & 45.0 / 45.2 & 25.0 / 25.3 & 25.8 / 26.3 & 34.8 / 35.9 \\
+        \textbf{IWH} & 44.0 / 44.4 & 25.9 / 26.4 & 25.7 / 26.3 & 35.5 / 36.6 \\ 
+        \textbf{EIA} & 51.3 / 52.1 & 26.9 / 27.5 & 27.6 / 28.4 & - / -\\ \bottomrule
     \end{tabular}
 \end{table}
 
-Table \ref{tab:seed-selection-adoption} presents the Total Participation and Total Adoption under threshold average condition for all the eight heuristics. The Immediate Weight based heuristic (H8) shows the best result. The results remain qualitatively unchanged in the network average case.
+Table \ref{tab:seed-selection-adoption} presents the Total Participation and Total Adoption under threshold average condition for all the eight heuristics. The Expected Immediate Adoption based heuristic (EIA) shows the best result. The results remain qualitatively unchanged in the network average case.
 
 
 % Comparison with greedy approximation algorithm.
 
 \begin{table}[htb]\footnotesize
     \centering
-    \caption{Total Participation / Total Adoption under different networks as \% of the network size. Heuristics H6, H7 an H7 give results quite close to the approx. algorithm.}\label{tab:comp-to-approx}
+    \caption{Total Participation / Total Adoption under different networks as \% of the network size. Heuristics IWR, IWH an EIA give results quite close to the approx. algorithm.}\label{tab:comp-to-approx}
     \begin{tabular}{cccc} \toprule
         Heuristics & PA & SW & SC \\ \midrule
         KKT & 43.7 / 44.5 & 26.2 / 26.4 & 27.3 / 27.3  \\
-        \textbf{H6} & 43.9 / 44.5 & 22.9 / 23.6 & 24.6 / 25.1 \\
-        \textbf{H7} & 33.3 / 33.4 & 22.9 / 23.6 & 23.5 / 24.1 \\ 
-        \textbf{H8} & 43.9 / 44.5 & 23.6 / 24.5 & 23.6 / 24.2 \\ \bottomrule
+        \textbf{IWR} & 43.9 / 44.5 & 22.9 / 23.6 & 24.6 / 25.1 \\
+        \textbf{IWH} & 33.3 / 33.4 & 22.9 / 23.6 & 23.5 / 24.1 \\ 
+        \textbf{EIA} & 43.9 / 44.5 & 23.6 / 24.5 & 23.6 / 24.2 \\ \bottomrule
     \end{tabular}
 \end{table}
 
-We compare the performance of the two Influence Weight  based heuristics (H6, H7) and the Immediate Adoption based heuristic (H8) against the greedy approx. algorithm KKT. Due to huge computational cost it is not practical to run the greedy algorithm on the previous networks. So we used PA, SW and SC networks of size $100$ with $b=9$ for the purpose of comparison. Table \ref{tab:comp-to-approx} presents the results of the comparison for the total participation metric. Notice that for the PA network H6 and H8 performs even better than the KKT approximation algorithm. This is not surprising since KKT may fail to obtain the optimal solution in isolated cases. In the next section, we discuss how to distribute behaviors over the seeds.
+We compare the performance of the two Influence Weight  based heuristics (IWR, IWH) and the Expected Immediate Adoption based heuristic (EIA) against the greedy approx. algorithm KKT. Due to huge computational cost it is not practical to run the greedy algorithm on the previous networks. So we used PA, SW and SC networks of size $100$ with $b=9$ for the purpose of comparison. Table \ref{tab:comp-to-approx} presents the results of the comparison for the total participation metric. Notice that for the PA network H6 and H8 performs even better than the KKT approximation algorithm. This is not surprising since KKT may fail to obtain the optimal solution in isolated cases. In the next section, we discuss how to distribute behaviors over the seeds.
 
 %\begin{table}
 %\centering
@@ -704,9 +719,23 @@ Suppose we have $n$ nodes with fixed resource distribution. Each node will have 
 
 Consequently we obtain the result that the expected number of active nodes in both the \textbf{TA} and \textbf{NA} cases are the same for the networks with constant in-degree. In the general case when the networks do not have a constant degree for every node but the randomization over the network structure preserves a fixed degree distribution (as in the case of Power Law or  Spatially Clustered networks) we may obtain similar results. However the probability that a node becomes active in time step $t+1$, given that it was not active till time step $t$ would be calculated for a node $v$ with $\kappa(v)=\kappa \ne 0$ and degree $d \ne 0$. Assuming that the distribution over the values $d$ would be the same at the time step $t$ in  both the cases (notice that the distribution over the values $\kappa$ would be the same for both the cases since the initial distribution of node resources are the same), we will obtain similar results. Our experimental results show that this observations about the Sticky model carries over to the general model. In all of the simulation experiments we observe that the estimations of the expected values of the different metrics (total participation, total adoption, resource utilization etc.) for both the \textbf{TA} and \textbf{NA} cases are almost identical.
 
-\subsection{Behavior Distribution over Seeds}
+\section{How Do We Distribute the Behaviors?} \label{sec:dist}
+In this section we discuss the behavior distribution problem - i.e. how to distribute the different behaviors over the selected seed set. We will first formally introduce the problem as an optimization problem. Next we will discuss different strategies for distributing the behaviors over the seed set. Then we will compare these different strategies through simulation experiments and discuss the pros and cons of each strategy.
 
-In this section we investigate the effects of the different behavior distribution heuristics across the initial seed set described in Section~\ref{sec:dist}. For this simulation, we use heuristic H7 (the one step spread based hill climbing heuristic) as it is the best performing seed selection heuristic. We designate the fraction of seeds to be early adopters to be $\alpha=0.1$. This means that we have $b=51$ for the synthetic networks and $b=501$ for the quantum physics collaboration network. As before, we compute the metrics under the threshold average and the network average simulations.
+\subsection{Behavior Distribution Problem}
+The behaviors adopted by the set of seed nodes have different implications on the metrics. If all nodes adopted the least costly behavior, for example, we would expect total participation to increase, but low resource utilization. The converse would be true in the case when seed nodes are chosen in such a way that all adopt the most expensive behavior. However, if we want to strike a balance between different behaviors such that all the behaviors are represented in the population, then we will have to distribute all the behaviors over the seed set according to some ratio. Here we formalize this scenario as an optimization problem.
+
+\subsubsection{P3: Determination of Optimum Behavior Distribution in the Seed Set:} Given a fixed seed budget $b$ and a lower bound on the number of adoptions of the lowest cost behavior $s_{min}$ (or a lower bound on the total participation of the lowest cost behavior $S_{min}$), what is the optimum distribution of behaviors in the seed set and the optimum set of $b$ seeds that will maximize the resource utilization while maintaining expected spread of $s_{min}$ for the lowest cost behavior (or $S_{min}$ for the total participation).
+
+%\textbf{problem P3 is unclear; what is $s_{min}$?}
+
+\subsection{Behavior Distribution Strategies}
+It should be noted that in the case of multiple behavior diffusion metrics like resource utilization, total participation and total adoption depends not only on the choice of the seeds but also on the distribution of the different behaviors in the chosen seed set. We test following five different distributions of the behaviors in the seed set. In the \textit{highest cost behavior only} distribution we allocate all the seeds to the highest cost behavior and none to the other behaviors. In the \textit{proportional to cost} distribution the behaviors are distributed over the seeds in the ratio of their costs. \textit{Uniform} distribution divides the seeds equally amongst all the behaviors. In the \textit{Inversely proportional to cost} behavior distribution behaviors are distributed over the seeds in the inverse ratio of their costs. So the highest cost behavior gets the lowest number of seeds and the lowest cost behavior gets the highest number of seeds. Finally, in the \textit{lowest cost behavior only} distribution all the seeds are assigned to the lowest cost behavior and no seeds are given to the other behavior.  
+
+
+\subsection{Experimental Evaluation}
+
+In this section we investigate the effects of the different behavior distribution heuristics across the initial seed set described in the previous section. For this simulation, we use heuristic IWH, since it is one of the best performing seed selection heuristics. We designate the fraction of seeds to be early adopters to be $\alpha=0.1$. This means that we have $b=51$ for the synthetic networks and $b=501$ for the quantum physics collaboration network. As before, we compute the metrics under the threshold average and the network average simulations.
 
 In the tables in this section, we shall use the following notation: Low (All seeds are assigned Lowest Cost Behavior); Inv. (the seeds are allocated behavior in Inverse proportion to behavior cost; Unif. (the behaviors are distributed Uniformly at random); Prop. (the behaviors are distributed Proportional to behavior cost); High ( all seeds are allocated the Highest cost behavior).
 
@@ -780,12 +809,17 @@ In the tables in this section, we shall use the following notation: Low (All see
 
 Table~\ref{tab:behav-util-threshold} shows the resource utilization in different networks for the threshold average and the network average simulations. We see that when each seed is either allocated the same low (high) behavior, the utilization is lowest (highest). This is unsurprising as we should expect high utilization to occur when we have high cost behaviors in the network. In Table~\ref{tab:behav-part-network}, we show the difference between the number of unique participants and the total number of behavior adoptions. We have omitted the simulations for the threshold average case, due to space limitations.  Those simulations are qualitatively similar to Table~\ref{tab:behav-part-network}. Notice that when all the seeds have either the same low (or high) behaviors assigned to all of them, there is unsurprisingly no difference between the total number participants and the total number of unique adoptions. As Table~\ref{tab:behav-part-network} shows, change to the behavior distribution over the seeds alters the unique number of participants as well as the total adoption. Therefore the seed distributions need to be chosen with care, the appropriate metric in mind. Both uniform and propositional to cost behavior distribution methods seem to hit a sweet spot between utilization and behavior diversity.
 
-\subsection{Achieving a Target Behavior Distribution}
+\section{Achieving a Target Behavior Distribution} \label{sec:target-dist}
+In this section we address the problem of achieving a target behavior distribution in the network. Formally the problem is defined as - 
+
+\subsubsection{P4: Obtaining Desired Distribution of Behaviors:} Given a fixed seed budget $b$, and a given fixed target distribution of behaviors $q$, how do we identify the $b$ seeds and the initial distribution of behaviors $p$ such that final distribution $p_T$ at time $T$ of behaviors in the population matches the target distribution $q$?
+
+In problem P4 we are interested in achieving a target distribution. One heuristic is to assign the target distribution as the starting behavior distribution over the seeds. In the following section we discuss simulation results for this strategy.
+
+\subsection{Empirical Evaluation}
 In this section we present experiments on a specific heuristic to achieve a specific target distribution $q$. We propose the following heuristic: set the behavior distribution $p$ over the seeds, \textit{to be equal} to the target distribution $q$.
 
-In this section we investigate the effect of seed set behavior distribution on the final distribution of behaviors in the population of active individuals. In addition to uniform, proportional to cost and inversely proportional to cost, 
-
-We will test to check if we can achieve the following six target distributions for the three behaviors in our simulations: $1:1:1$; $1:2:3$; $1:3:2$; $2:1:3$; $2:3:1$; $3:1:2$ and $3:2:1$. Notice that the target behavior distribution ratios are different from the behavior costs. As a reminder, the costs are $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$.  We use the KL-divergence between target distribution and the actual behavior diffusion distribution to measure if our heuristic achieves the target distribution $q$.
+In this section we investigate the effect of seed set behavior distribution on the final distribution of behaviors in the population of active individuals. In addition to uniform, proportional to cost and inversely proportional to cost, we will test to check if we can achieve the following six target distributions for the three behaviors in our simulations: $1:1:1$; $1:2:3$; $1:3:2$; $2:1:3$; $2:3:1$; $3:1:2$ and $3:2:1$. Notice that the target behavior distribution ratios are different from the behavior costs. As a reminder, the costs are $c^1=0.2$, $c^2=0.5$ and $c^3=0.7$.  IWH heuristic will is used for seed selection. We use the KL-divergence between target distribution and the actual behavior diffusion distribution to measure if our heuristic achieves the target distribution $q$.
 
 \begin{table}[htb]\footnotesize
 \centering
@@ -822,7 +856,7 @@ Figure~\ref{fig:comparison} shows the comparison in resource utilization with di
 
 \section{Discussion and Open Issues}\label{sec:disc}
 One of the main motivations of the present work was to develop a realistic model of the behavior diffusion process. There are many ways in which our work can be extended. Here we discuss about a few such possible extensions.
-
+    
 Our present model does not consider the role of behavioral inertia in the diffusion process. Often people are hesitant of adopting new behaviors because they cannot free their resources from practicing an old behavior which possibly has less value. This can be modeled in our framework by introducing an additional benefit for the already adopted behaviors. Another technique would be to introduce epidemic models such as SIRS to better model long-term behavioral adoption. 
 
 In a network, we receive social signals from our friends, but there is noise because we miss messages and or we check them late. In modeling the behavior adoption problem, we have ignored the role of constraints in how they affect the production and consumption of messages from peers. Explicit consideration of the cost of social signaling would not only make the model more realistic and provide better bounds on the maximal resource utilization of the networks resources.
