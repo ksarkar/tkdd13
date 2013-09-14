@@ -41,7 +41,7 @@
 
 \usepackage[super]{nth}
 
-\usepackage{subfig}
+%\usepackage{subfig}
 \usepackage{multirow}
 
 \usepackage{amsmath, mathrsfs}
@@ -69,6 +69,13 @@
 % The units package provides nice, non-stacked fractions and better spacing
 % for units.
 \usepackage{units}
+
+\usepackage{caption}
+\captionsetup{compatibility=false}
+
+\let\subcaption\undefined
+\let\subfloat\undefined
+\usepackage{subcaption}
 
 % for side captions
 \usepackage{sidecap}
@@ -177,8 +184,24 @@ Next we mention a few interesting critiques of the study of social diffusion. Th
 \section{Models of Behavior Adoption under Resource Constraint}\label{sec:model}
 In this section we introduce our behavior diffusion models. First we will describe our model of multiple behavior diffusion in a resource constrained network in the most general form. Next we will present a simplified version of the general model which will provide us with some analytical insight into the algorithmic problems to be defined in the next section. Then we will introduce metrics, including resource utilization, unique participation and number of behavior adoptions to evaluate the behavior adoption process.
 
-\subsection{A General Model of Multiple Behavior Diffusion in a Resource Constrained Social Network} \label{sub-sec:model}
-We now describe the model for each user, the properties of each behavior and the behavior adoption process. We represent the social network with an undirected graph $G=(V,E)$. Each node $v \in V$ of the graph $G$ represents an individual and an edge $e \in E$ between two nodes indicate a social relationship between the two individuals. 
+\subsection{A Model of Multiple Behavior Diffusion in a Resource Constrained Social Network} \label{sub-sec:model}
+We now describe the model for each user, the properties of each behavior and the behavior adoption process. Conceptually our behavior adoption model can be described as follows - an individual adopts a new behaviors if the behavior has some value to him, or he has some interest in the behavior (intent), many of her friends have adopted the behavior (social signal), and she has enough available resource to pursue it (resource). Her payoff from adopting that behavior will be determined by her intent and social signal. Figure \ref{fig:concept-1} and \ref{fig:snap-concept-1} shows the idea in a simple way. Next we try to describe this idea formally.
+
+\begin{figure}[htb]
+\begin{centering}
+\includegraphics[width=\columnwidth]{figs/candidate}
+\par\end{centering}
+\caption{Sufficient social signal, intent and resource make an individual a candidate for adoption of a behavior.}\label{fig:concept-1}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{centering}
+\includegraphics[width=\columnwidth]{"figs/candidate and payoff"}
+\par\end{centering}
+\caption{Payoff for adopting a behavior comes from an individual's intent and social signal.}\label{fig:concept-2}
+\end{figure}
+
+We represent the social network with an undirected graph $G=(V,E)$. Each node $v \in V$ of the graph $G$ represents an individual and an edge $e \in E$ between two nodes indicate a social relationship between the two individuals. 
 
 We wish to spread $k$ behaviors in the social network. Each behavior $i$ has an associated cost $c^i$ and a utility $u^i$. The cost refers to the cost of adoption and the utility refers to the intrinsic utility gained by an individual by adopting this behavior. In a simplification, we assume that both the cost $c^i$ and the utility $u^i$ of behavior $i$ are intrinsic to the behavior and independent of the individual who adopts the behavior. Without loss of generality, we assume that $0 \leq c^i, u^i \leq 1$.
 
@@ -191,29 +214,45 @@ The behavior diffusion process continues until no additional adoption is possibl
 
 In our diffusion model, we assume that the total resources available $r(v)$ at each node  are known, while the threshold for adoption $\theta$ for any behavior is unknown. This assumption is reasonable if when people are willing to make public their available resources to participate in a set of behaviors. This can arise say in a private, mobile social network app focused on adoption of healthy behaviors including wellness, healthy eating and exercise, where individuals join the network to participate in healthy behaviors but each individual is resource limited. An individual may declare that she has only one hour to spend on exercise each week, but would like to be nudged to participate in a health-related activity.
 
-Figure \ref{fig:model} shows an illustration of the dynamics with a four node network where three different behaviors - recycling, using public transport and using stairs are spreading.
+Figure \ref{fig:model} shows an illustration of the dynamics with a four node network where three different behaviors - (1) recycling, (2) using public transport and (3) eating organic food are spreading. At time step $t$ the state of the network is shown in \ref{fig:state-before}. At this time step, for $v$, the social signal of eating organic food is weak. So $v$ considers only recycling and using public transport. After maximizing payoff subject to the resource constraint, $v$ adopts only recycling. Although public transport has strong social signal, $v$ cannot adopt that behavior because it does not have enough resource. Notice that the payoff for recycling is higher than that of public transport, though the intrinsic utility of recycling was lower than that of public transport. 
 
-\begin{SCfigure}
-    \includegraphics[viewport=3.5in 1in 6.75in 7in, width=\columnwidth]{figs/timeline}
-    \caption{There are three behaviors - recycling, public transport and using stairs with the specified cost and utility. 
-    \vspace{0.1in} \\
-    The available resource and the thresholds of the node $v$ in the network are also specified. 
-    \vspace{0.1in} \\
-    At time $t$ the state of the network is shown. All three neighbors of $v$ are recycling, two of them are using public transport and one of them are using stairs. The corresponding influence weights are also shown.
-    \vspace{0.1in} \\
-    For the third behavior i.e. using stairs, the local signal is not strong enough. So it will not be considered for adoption.
-    \vspace{0.1in} \\
-    $v$ does not have enough resource to adopt both recycling and using public transport. But the payoff of recycling is greater than the payoff of using public transport. So $v$ adopts only recycling in this time step. }\label{fig:model}
-\end{SCfigure}
+%viewport=1.25in 5in 6in 10.75in
+%viewport=1.75in 4.5in 7in 11in
 
-\subsection{A Simplified Sticky Model} \label{sub-sec:simple-model}
-In this section we present a simplified version of the multiple behavior diffusion model defined in the previous section. Although the previous model makes fewer assumptions and is a more faithful representation of reality, it is cumbersome to deal with analytically. The simplified model, which we will call the "Sticky" model, makes stricter assumptions and affords us some interesting analytical insights on the fundamental processes of the multiple behavior diffusion phenomena.
+\begin{figure}[h]
+	\parbox{.4\linewidth}{
+	\includegraphics[trim=50 400 125 10, width=\linewidth]{figs/timeline-1a}}%
+	\hspace{.2\linewidth}%
+	\parbox[][][t]{.4\linewidth}{%
+	\subcaption{The three beahviors - (1) recycling, (2) using public transport, and (3) eating organic food with respective costs as well as the network is shown. The intrinsic utility of the behaviors are same as the cost. So $c^1=u^1=0.2, ~c^2=u^2=0.5, ~c^3=u^3=0.7$. Resource of the node $v$, $r(v)=0.6$, and the thresholds are - $\theta^1(v)=0.1,~\theta^2(v)=0.4,~\theta^3=0.6$.}}
+	\parbox{.4\linewidth}{
+	\includegraphics[trim=85 450 125 0, width=\linewidth]{figs/timeline-2a}}%
+	\hspace{.2\linewidth}%
+	\parbox[][][t]{.4\linewidth}{%
+	\subcaption{This is the network at some time step $t$. All three of the neighbors of $v$ have adopted recycling, two of them have adopted public transport, and only one of them is eating organic food. $v$ has not adopted any behavior yet. The local influences for the three behaviors are as follows - $l^1(v)=1.0,~l^2(v)=0.66,~l^3(v)=0.33$.}\label{fig:state-before}}
+	\parbox{.4\linewidth}{
+	\includegraphics[trim=85 450 125 30, width=\linewidth]{figs/timeline-3a}}%
+	\hspace{.2\linewidth}%
+	\parbox[][][t]{.4\linewidth}{%
+	\subcaption{Local influence for organic food is less than the threshold, i.e $l^3(v)<\theta^3(v)$. So $v$ will not consider organic food for adoption.}}
+	\parbox{.4\linewidth}{
+	\includegraphics[trim=85 450 125 30, width=\linewidth]{figs/timeline-4a}}%
+	\hspace{.2\linewidth}%
+	\parbox[][][t]{.4\linewidth}{%
+	\subcaption{$c^1+c^2>r(v)$, so $v$'s resource is insufficient for adopting both recycling and public transport. Payoff for recycling, $p^1(v)=0.6$, and payoff for public transport, $p^2(v)=0.58$. For $v$ the payoff for recycling is higher than the payoff for using public transport though the intrinsic utility of public transport is higher than that of recycling. So $v$ will adopt recycling at the end of time step $t$. }}
+	\caption{Multiple behavior adoption model.}\label{fig:model}
+\end{figure}
 
-The main difference between the simplified model and the original model is in the temporal unfolding of the diffusion process. Unlike the original model, in the simplified model once a node adopts a behavior at some time step, it does not get rid of that behavior in the subsequent time steps. The behavior adoption is \textit{progressive} \cite{Kempe03}. So once a behavior is adopted by a node, it "sticks" with that node (hence the name \textit{Sticky} model). At each time step each node selects the candidate behaviors for adoption from only those behaviors that are not already adopted by that node. Otherwise the selection criteria are the same as the original model. The node then adopts the set of candidate behaviors that maximize his payoff subject to the constraint that the combined cost of the newly adopted behaviors is less than the remaining resource of the node. 
 
-Another difference is that in this model nodes do not consider local network utility $l^i(v)$ while calculating their payoffs. The payoff of a node from adopting a behavior is simply the intrinsic utility of that behavior. All the other properties of the nodes and the behaviors in the Sticky model are the same as in the original model.
+%\subsection{A Simplified Sticky Model} \label{sub-sec:simple-model}
+%In this section we present a simplified version of the multiple behavior diffusion model defined in the previous section. 
+Next we present a simplified version of the aforementioned multiple behavior diffusion model. Although the previous model makes fewer assumptions and is a more faithful representation of reality, it is cumbersome to deal with analytically. The simplified model, which we will call the "Sticky" model, makes stricter assumptions and affords us some interesting analytical insights on the fundamental processes of the multiple behavior diffusion phenomena.
 
-\subsection{Metrics}
+The difference between the simplified model and the original model is in the temporal unfolding of the diffusion process. Unlike the original model, in the simplified model once a node adopts a behavior at some time step, it does not get rid of that behavior in the subsequent time steps. The behavior adoption is \textit{progressive} \cite{Kempe03}. So once a behavior is adopted by a node, it "sticks" with that node (hence the name \textit{Sticky} model). At each time step each node selects the candidate behaviors for adoption from only those behaviors that are not already adopted by that node. Otherwise the selection criteria are the same as the original model. The node then adopts the set of candidate behaviors that maximize his payoff subject to the constraint that the combined cost of the newly adopted behaviors is less than the remaining resource of the node. 
+
+%Another difference is that in this model nodes do not consider local network utility $l^i(v)$ while calculating their payoffs. The payoff of a node from adopting a behavior is simply the intrinsic utility of that behavior. All the other properties of the nodes and the behaviors in the Sticky model are the same as in the original model.
+
+\subsection{Measurement of the Diffusion}
 We measure the effectiveness of the diffusion process with three metrics: total participation, total adoption and resource utilization. Since the behavior adoption is a stochastic process, we compute the expected value of each metric through simulation.
 
 \subsubsection{Total Participation}

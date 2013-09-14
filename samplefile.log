@@ -1,0 +1,242 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.4.19)  13 SEP 2013 16:08
+entering extended mode
+**samplefile.tex
+(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd-13\samplefile.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+\c@ContinuedFloat=\count88
+)
+(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
+\c@subfigure=\count89
+\c@subtable=\count90
+) (C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\sidecap\sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\SC@BOXWD=\dimen111
+\SC@CAPWD=\dimen112
+\SC@tempdima=\dimen113
+\SC@tempdimb=\dimen114
+\c@SC@C=\count91
+\SC@BOX=\box26
+)
+(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd-13\samplefile.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen115
+\scratchbox=\box27
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen116
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks16
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: sidecap package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(C:\Users\ksarkar1\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 126.
+)
+\CenteringLeftskip=\skip43
+\RaggedLeftLeftskip=\skip44
+\RaggedRightLeftskip=\skip45
+\CenteringRightskip=\skip46
+\RaggedLeftRightskip=\skip47
+\RaggedRightRightskip=\skip48
+\CenteringParfillskip=\skip49
+\RaggedLeftParfillskip=\skip50
+\RaggedRightParfillskip=\skip51
+\JustifyingParfillskip=\skip52
+\CenteringParindent=\skip53
+\RaggedLeftParindent=\skip54
+\RaggedRightParindent=\skip55
+\JustifyingParindent=\skip56
+)
+<figs/timeline-1a.pdf, id=1, 615.0478pt x 795.72281pt>
+File: figs/timeline-1a.pdf Graphic file (type pdf)
+
+<use figs/timeline-1a.pdf>
+Package pdftex.def Info: figs/timeline-1a.pdf used on input line 16.
+(pdftex.def)             Requested size: 103.50105pt x 126.00131pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 16.
+
+<figs/timeline-2a.pdf, id=2, 615.0478pt x 795.72281pt>
+File: figs/timeline-2a.pdf Graphic file (type pdf)
+
+<use figs/timeline-2a.pdf>
+Package pdftex.def Info: figs/timeline-2a.pdf used on input line 21.
+(pdftex.def)             Requested size: 103.50105pt x 137.99702pt.
+
+<figs/timeline-3a.pdf, id=3, 615.0478pt x 795.72281pt>
+File: figs/timeline-3a.pdf Graphic file (type pdf)
+
+<use figs/timeline-3a.pdf>
+Package pdftex.def Info: figs/timeline-3a.pdf used on input line 26.
+(pdftex.def)             Requested size: 103.50105pt x 137.99702pt.
+
+<figs/timeline-4a.pdf, id=4, 615.0478pt x 795.72281pt>
+File: figs/timeline-4a.pdf Graphic file (type pdf)
+
+<use figs/timeline-4a.pdf>
+Package pdftex.def Info: figs/timeline-4a.pdf used on input line 31.
+(pdftex.def)             Requested size: 103.50105pt x 137.99702pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--35
+[]$[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--35
+$[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--35
+$[]$ $[]$
+ []
+
+
+LaTeX Warning: Float too large for page by 14.99239pt on input line 36.
+
+File: figs/timeline-1a.pdf Graphic file (type pdf)
+<use figs/timeline-1a.pdf>
+Package pdftex.def Info: figs/timeline-1a.pdf used on input line 40.
+(pdftex.def)             Requested size: 124.20251pt x 160.68373pt.
+File: figs/timeline-2a.pdf Graphic file (type pdf)
+ <use figs/timeline-2a.pdf>
+Package pdftex.def Info: figs/timeline-2a.pdf used on input line 47.
+(pdftex.def)             Requested size: 124.20251pt x 160.68373pt.
+File: figs/timeline-3a.pdf Graphic file (type pdf)
+
+<use figs/timeline-3a.pdf>
+Package pdftex.def Info: figs/timeline-3a.pdf used on input line 54.
+(pdftex.def)             Requested size: 124.20251pt x 160.68373pt.
+
+
+LaTeX Warning: Float too large for page by 7.0512pt on input line 59.
+
+[1
+
+{C:/Users/ksarkar1/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2 <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs/tkdd-13/figs/timelin
+e-1a.pdf> <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs/tkdd-13/figs/
+timeline-2a.pdf> <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs/tkdd-1
+3/figs/timeline-3a.pdf> <C:/Users/ksarkar1/Dropbox/Research/Reports/report-docs
+/tkdd-13/figs/timeline-4a.pdf>] [3]
+(C:\Users\ksarkar1\Dropbox\Research\Reports\report-docs\tkdd-13\samplefile.aux)
+ ) 
+Here is how much of TeX's memory you used:
+ 2398 strings out of 494045
+ 37885 string characters out of 3145960
+ 92149 words of memory out of 3000000
+ 5713 multiletter control sequences out of 15000+200000
+ 4544 words of font info for 17 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 36i,7n,43p,242b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on samplefile.pdf (3 pages, 294273 bytes).
+PDF statistics:
+ 140 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
